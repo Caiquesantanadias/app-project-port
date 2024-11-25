@@ -50,7 +50,7 @@ public class SecurityConfiguration {
                 if (grantedAuthority instanceof OidcUserAuthority oidcUserAuthority) {
                     grantedAuthorities
                             .addAll(SecurityUtils.extractAuthorityFromClaims(oidcUserAuthority.getUserInfo().getClaims()));
-                }   
+                }
             });
             return grantedAuthorities;
         };
